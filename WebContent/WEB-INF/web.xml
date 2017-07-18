@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0" metadata-complete="true">
+
+	<listener>
+		<listener-class>com.yc.web.listeners.InitListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>initServlet</servlet-name>
+		<servlet-class>com.yc.web.servlets.InitServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>newsServlet</servlet-name>
+		<servlet-class>com.yc.web.servlets.NewsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>usersServlet</servlet-name>
+		<servlet-class>com.yc.web.servlets.UsersServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>adminServlet</servlet-name>
+		<servlet-class>com.yc.web.servlets.AdminServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>newsTypeServlet</servlet-name>
+		<servlet-class>com.yc.web.servlets.NewsTypeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>uploadSinglePicFileServlet</servlet-name>
+		<servlet-class>com.yc.web.servlets.UploadSinglePicFileServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>newsAddServlet</servlet-name>
+		<servlet-class>com.yc.web.servlets.NewsAddServlet</servlet-class>
+	</servlet>
+	
+	
+	<servlet-mapping>
+		<servlet-name>newsAddServlet</servlet-name>
+		<url-pattern>/back/newsAdd.action</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>uploadSinglePicFileServlet</servlet-name>
+		<url-pattern>/back/uploadSinglePicFile.action</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>newsTypeServlet</servlet-name>
+		<url-pattern>/back/newsType.action</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>adminServlet</servlet-name>
+		<url-pattern>/back/admin.action</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>usersServlet</servlet-name>
+		<url-pattern>/users.action</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>usersServlet</servlet-name>
+		<url-pattern>/back/users.action</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>initServlet</servlet-name>
+		<url-pattern>/init.action</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>newsServlet</servlet-name>
+		<url-pattern>/news.action</url-pattern>
+	</servlet-mapping>
+
+	<resource-ref>
+	  <res-ref-name>
+	    jdbc/DB
+	  </res-ref-name>
+	  <res-type>
+	    javax.sql.DataSource
+	  </res-type>
+	  <res-auth>
+	    Container
+	  </res-auth>
+	</resource-ref>
+	
+
+
+</web-app>
